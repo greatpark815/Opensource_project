@@ -1,0 +1,35 @@
+<body>
+{% csrf_token %}
+NC백화점 스카이필드 매치
+{%for NC_object in NC%}
+    <p>------------------------</p>
+    <p>{{NC_object.match_Date}}<p>
+    <p>{{NC_object.match_Time}}</p>
+    <p>{{NC_object.match_player}}명</P>
+    <a href="{% url 'main:info_NC' %}">더 알아보기 <a> 
+  
+
+    <p>------------------------</p>
+{%endfor%}
+FC 풋살센터 매치
+{%for FC_object in FC%}
+    <p>------------------------</p>
+    <p>{{FC_object.match_Date}}<p>
+    <p>{{FC_object.match_Time}}</p>
+    <p>{{FC_object.match_player}}명</P>
+    <a href="{% url 'main:info_FC' %}">더 알아보기 <a> 
+
+    <p>------------------------</p>
+{%endfor%}
+Jangseong 풋살센터 매치
+{%for Jangseong_object in Jangseong%}
+
+    <p>------------------------</p>
+    <p>{{Jangseong_object.match_Date}}<p>
+    <p>{{Jangseong_object.match_Time}}</p>
+    <p>{{Jangseong_object.match_player}}명</P>
+    <a href="{% url 'main:info_Jangseong' %}">더 알아보기 <a> 
+
+    <p>------------------------</p>
+{%endfor%}
+</body>

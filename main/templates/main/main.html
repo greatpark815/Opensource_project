@@ -1,0 +1,10 @@
+<body>
+    <h1>혼풋 시작해봅시다</h1>
+    <h2>원하는 매치의 날짜를 입력하세요</h2>
+    <hr>
+    <form action="" method="POST">
+        {% csrf_token%}
+        <p><input name="match_date" type="date" value="2023-06-14"></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+</body>
